@@ -35,7 +35,7 @@ app.post('/send-email', async (req, res) => {
 
     // Define email options
     const mailOptions = {
-        from: ${email},
+        from: `${email}`,
         to: 'ai.ronycode@gmail.com', // Update with your recipient email address
         subject: 'New Form Submission',
         text: `
