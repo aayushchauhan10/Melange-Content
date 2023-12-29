@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 
 // CORS middleware to allow requests from your React app (update with your frontend URL)
 app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'http://localhost:5173');
+    res.header('Access-Control-Allow-Origin', 'https://melange-content-page.netlify.app');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     next();
 });
@@ -35,7 +35,7 @@ app.post('/send-email', async (req, res) => {
 
     // Define email options
     const mailOptions = {
-        from: `${email}`,
+        from: ${email},
         to: 'ai.ronycode@gmail.com', // Update with your recipient email address
         subject: 'New Form Submission',
         text: `
@@ -60,5 +60,5 @@ app.post('/send-email', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(Server is running on port ${PORT});
 });
