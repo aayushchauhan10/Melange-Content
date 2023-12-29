@@ -59,5 +59,5 @@ app.post("/send-email", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log($`{PORT}`);
+  console.log("Port is running");
 });
