@@ -27,15 +27,15 @@ app.post("/send-email", async (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "Gmail", // Update with your email service (e.g., 'gmail')
     auth: {
-      user: "ai.ronycode@gmail.com", // Update with your email address
-      pass: "msgx chrq cokf qlhj", // Update with your email password
+      user: "hello@melangedigital.in", // Update with your email address
+      pass: "fvvc zduy fcuu rnxv", // Update with your email password
     },
   });
 
   // Define email options
   const mailOptions = {
     from: `${name}`,
-    to: "ai.ronycode@gmail.com", // Update with your recipient email address
+    to: "hello@melangedigital.in",
     subject: "New Form Submission",
     text: `
       Name: ${name}
@@ -59,5 +59,5 @@ app.post("/send-email", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log("Port is running");
+  console.log("server is running");
 });
