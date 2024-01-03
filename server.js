@@ -12,6 +12,7 @@ app.use((req, res, next) => {
   res.header(
     "Access-Control-Allow-Origin",
     "https://melange-content.netlify.app/"
+    // "http://localhost:5173"
   );
   res.header(
     "Access-Control-Allow-Headers",
@@ -35,7 +36,8 @@ app.post("/send-email", async (req, res) => {
   // Define email options
   const mailOptions = {
     from: `${name}`,
-    to: "hello@melangedigital.in",
+    to: "ayush@melangedigital.in",
+    // to: "hello@melangedigital.in",
     subject: "New Form Submission",
     text: `
       Name: ${name}
@@ -50,7 +52,7 @@ app.post("/send-email", async (req, res) => {
   try {
     // Send email
     const info = await transporter.sendMail(mailOptions);
-    console.log("Email sent:", info.messageId);
+    // console.log("Email sent:", info.messageId);
     res.status(200).json({ success: true });
   } catch (error) {
     console.error("Error sending email:", error);
