@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use((req, res, next) => {
   res.header(
     "Access-Control-Allow-Origin",
-    "https://melange-content-page.netlify.app"
+    "https://melange-content.netlify.app/"
   );
   res.header(
     "Access-Control-Allow-Headers",
