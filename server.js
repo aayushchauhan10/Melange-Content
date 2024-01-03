@@ -12,6 +12,7 @@ app.use((req, res, next) => {
   res.header(
     "Access-Control-Allow-Origin",
     "https://melange-content.netlify.app/"
+    // This is the main header
     // "http://localhost:5173"
   );
   res.header(
